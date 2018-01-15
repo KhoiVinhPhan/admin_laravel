@@ -55,14 +55,6 @@
                                     </a>
                                 </li>
                             @endcan
-
-                            @can('view_posts')
-                                <li class="{{ Request::is('posts*') ? 'active' : '' }}">
-                                    <a href="{{ route('posts.index') }}">
-                                        <span class="text-success glyphicon glyphicon-text-background"></span> Posts
-                                    </a>
-                                </li>
-                            @endcan
                         @endif
                     </ul>
 

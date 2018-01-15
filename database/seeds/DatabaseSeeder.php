@@ -69,12 +69,6 @@ class DatabaseSeeder extends Seeder
             Role::firstOrCreate(['name' => 'User']);
             $this->command->info('Added only default user role.');
         }
-
-
-        // now lets seed some posts for demo
-        factory(\App\Post::class, 30)->create();
-        $this->command->info('Some Posts data seeded.');
-        $this->command->warn('All done :)');
     }
 
     /**
