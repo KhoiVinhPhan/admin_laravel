@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.backend.app')
 
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <div class="">
-                <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body text-center" style="margin-top: 4em">
 
@@ -19,8 +18,7 @@
                     @endrole
 
                     <p>&nbsp;<br>
-                    <p>Assign different <code>roles</code> to users and login from different browsers <br>
-                        to see <code>access control</code> and <code>authorization</code> at work.</p>
+                    <p>Designer: khoivinhphan</p>
                 </div>
             </div>
         </div>

@@ -13,14 +13,13 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('giaodien');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/administrator', 'HomeController@index')->name('home');
 
 Route::group( ['middleware' => ['auth']], function() {
-    Route::resource('users', 'UserController');
-    Route::resource('roles', 'RoleController');
-    Route::resource('posts', 'PostController');
+    Route::resource('administrator/users', 'UserController');
+    Route::resource('administrator/roles', 'RoleController');
 });

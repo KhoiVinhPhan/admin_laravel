@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title', 'Roles & Permissions')
+@section('title', 'Quản lý quyền')
 
 @section('content')
 

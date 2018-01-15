@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Bootstrap Dashboard by Bootstrapious.com</title>
+  <title>@yield('title')</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -35,7 +35,7 @@
           <!-- header-->
           @include('layouts.backend.header')
           <!-- content-->
-          <div class="container">
+          <div class="container-fluid">
             <div id="flash-msg">
               @include('flash::message')
             </div>
@@ -63,17 +63,17 @@
 
         <script>
           $(function () {
-                                    // flash auto hide
-                                    $('#flash-msg .alert').not('.alert-danger, .alert-important').delay(6000).slideUp(500);
-                                  })
-                                </script>
-                                <script>
-                                  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-                                    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-                                  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-                                  e.src='//www.google-analytics.com/analytics.js';
-                                  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-                                  ga('create','UA-XXXXX-X');ga('send','pageview');
-                                </script>
-                              </body>
-                              </html>
+      // flash auto hide
+      $('#flash-msg .alert').not('.alert-danger, .alert-important').delay(6000).slideUp(500);
+    })
+  </script>
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+</body>
+</html>

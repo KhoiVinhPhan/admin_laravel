@@ -4,9 +4,9 @@
 @endcan
 
 @can('delete_users')
-    {!! Form::open( ['method' => 'delete', 'url' => route($entity.'.destroy', ['user' => $id]), 'style' => 'display: inline', 'onSubmit' => 'return confirm("Are yous sure wanted to delete it?")']) !!}
+    {!! Form::open( ['method' => 'delete', 'url' => route($entity.'.destroy', ['user' => $id]), 'style' => 'display: inline', 'onSubmit' => 'return confirm("Bạn chắc chắn muốn xóa?")']) !!}
         <button type="submit" class="btn-delete btn btn-xs btn-danger">
-            <i class="glyphicon glyphicon-trash"></i>
+            <i class="fa fa-trash">Xóa</i>
         </button>
     {!! Form::close() !!}
 @endcan
