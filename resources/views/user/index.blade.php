@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.backend.app')
 
-@section('title', 'Users')
+@section('title', 'Quản lý tài khoản')
 
 @section('content')
     <div class="row">
@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-7 page-action text-right">
             @can('add_users')
-                <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm"> <i class="glyphicon glyphicon-plus-sign"></i> Create</a>
+                <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm"> <i class="glyphicon glyphicon-plus-sign"></i> Tạo tài khoản</a>
             @endcan
         </div>
     </div>
@@ -18,20 +18,22 @@
         <table class="table table-bordered table-striped table-hover" id="data-table">
             <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
+                <th>#</th>
+                <th>Tên</th>
                 <th>Email</th>
-                <th>Role</th>
-                <th>Created At</th>
+                <th>Quyền hạn</th>
+                <th>Thời gian tạo</th>
                 @can('edit_users', 'delete_users')
-                <th class="text-center">Actions</th>
+                <th class="text-center">Hành động</th>
                 @endcan
             </tr>
             </thead>
             <tbody>
+            <?php $stt=0; ?>
             @foreach($result as $item)
+            <?php $stt++; ?>
                 <tr>
-                    <td>{{ $item->id }}</td>
+                    <td>{{ $stt }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->roles->implode('name', ', ') }}</td>
