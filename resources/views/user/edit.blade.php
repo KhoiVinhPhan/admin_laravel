@@ -6,10 +6,10 @@
 
     <div class="row">
         <div class="col-md-5">
-            <h3>Edit {{ $user->first_name }}</h3>
+            <h3>Chỉnh sửa tài khoản: {{ $user->email }}</h3>
         </div>
         <div class="col-md-7 page-action text-right">
-            <a href="{{ route('users.index') }}" class="btn btn-default btn-sm"> <i class="fa fa-arrow-left"></i> Back</a>
+            <a href="{{ route('users.index') }}" class="btn btn-default btn-sm"> <i class="fa fa-arrow-left"></i> Quay lại</a>
         </div>
     </div>
 
@@ -21,7 +21,7 @@
                         {!! Form::model($user, ['method' => 'PUT', 'route' => ['users.update',  $user->id ] ]) !!}
                             @include('user._form')
                             <!-- Submit Form Button -->
-                            {!! Form::submit('Save Changes', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::submit('Cập nhật', ['class' => 'btn btn-primary']) !!}
                         {!! Form::close() !!}
                     </div>
                 </div>
