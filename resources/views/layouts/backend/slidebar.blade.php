@@ -16,7 +16,7 @@
                             @can('view_users')
                                 <li class="{{ Request::is('administrator/users*') ? 'active' : '' }}">
                                     <a href="{{ route('users.index') }}">
-                                        <span class="text-info glyphicon glyphicon-user"></span> Users
+                                        <span class="text-info glyphicon glyphicon-user"></span> Tài khoản
                                     </a>
                                 </li>
                             @endcan
@@ -25,7 +25,7 @@
                             @can('view_roles')
                             <li class="{{ Request::is('administrator/roles*') ? 'active' : '' }}">
                                 <a href="{{ route('roles.index') }}">
-                                    <span class="text-danger glyphicon glyphicon-lock"></span> Roles
+                                    <span class="text-danger glyphicon glyphicon-lock"></span> Quyền và chính sách
                                 </a>
                             </li>
                             @endcan

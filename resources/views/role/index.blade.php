@@ -12,34 +12,34 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="roleModalLabel">Role</h4>
+                    <h4 class="modal-title" id="roleModalLabel">Quyền</h4>
                 </div>
                 <div class="modal-body">
                     <!-- name Form Input -->
                     <div class="form-group @if ($errors->has('name')) has-error @endif">
-                        {!! Form::label('name', 'Name') !!}
-                        {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Role Name']) !!}
+                        {!! Form::label('name', 'Tên') !!}
+                        {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Tên quyền']) !!}
                         @if ($errors->has('name')) <p class="help-block">{{ $errors->first('name') }}</p> @endif
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
 
                     <!-- Submit Form Button -->
-                    {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
+                    {!! Form::submit('Tạo', ['class' => 'btn btn-primary']) !!}
                 </div>
                 {!! Form::close() !!}
             </div>
         </div>
     </div>
-
+    <br>
     <div class="row">
         <div class="col-md-5">
-            <h3>Roles</h3>
+            <h3>Quyền và chính sách</h3>
         </div>
         <div class="col-md-7 page-action text-right">
             @can('add_roles')
-                <a href="#" class="btn btn-sm btn-success pull-right" data-toggle="modal" data-target="#roleModal"> <i class="glyphicon glyphicon-plus"></i> New</a>
+                <a href="#" class="btn btn-sm btn-success pull-right" data-toggle="modal" data-target="#roleModal"> <i class="glyphicon glyphicon-plus"></i> Thêm</a>
             @endcan
         </div>
     </div>
@@ -50,14 +50,14 @@
 
         @if($role->name === 'Admin')
             @include('shared._permissions', [
-                          'title' => $role->name .' Permissions',
+                          'title' => $role->name .' Permissions >>',
                           'options' => ['disabled'] ])
         @else
             @include('shared._permissions', [
-                          'title' => $role->name .' Permissions',
+                          'title' => $role->name .' Permissions >>',
                           'model' => $role ])
             @can('edit_roles')
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Lưu', ['class' => 'btn btn-primary btn-sm']) !!}
             @endcan
         @endif
 
