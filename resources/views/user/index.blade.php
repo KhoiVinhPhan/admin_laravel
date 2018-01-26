@@ -4,7 +4,7 @@
 <div>
   <div class="card">
     <div class="card-header d-flex align-items-center">
-        <h2 class="h5 display">Tài khoản hệ thống: {{ $result->total() }}</h2>
+        <h2 class="h4">Tài khoản hệ thống: {{ $result->total() }}</h2>
         <div class="col-md-10 page-action text-right">
             @can('add_users')
             <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm"> <i class="glyphicon glyphicon-plus-sign"></i> Tạo tài khoản</a>
